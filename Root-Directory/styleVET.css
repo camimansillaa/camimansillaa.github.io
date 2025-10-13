@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(to bottom, #fff1eb, #ace0f9);
+  background-attachment: fixed;
+}
+
+header, footer {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-size: 400% 400%;
+  animation: sunsetGradient 15s ease infinite;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.step {
+  margin-bottom: 2rem;
+}
+
+.step img {
+  max-width: 100%;
+  border: 2px solid #fad0c4;
+  border-radius: 6px;
+  display: block;
+  margin-top: 1rem;
+}
+
+.video-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+a {
+  color: #ff758c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes sunsetGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
