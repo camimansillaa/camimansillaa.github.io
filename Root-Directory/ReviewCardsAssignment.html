@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Flashcards 🍂</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ce68eb, #dbafd7, #de9151);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+    color: #4b2e05;
+    text-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    letter-spacing: 1px;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 15px;
+    perspective: 1000px;
+    cursor: pointer;
+    height: 200px;
+    transition: transform 0.4s;
+    box-shadow: 0 4px 15px rgba(79, 48, 19, 0.15);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  }
+
+  .card:hover .inner {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .front {
+    background: linear-gradient(160deg, #ffcf91, #f7a072);
+    color: #4b2e05;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .back {
+    background: linear-gradient(160deg, #c76a28, #7b341e);
+    color: #fff8e7;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+  }
+
+  .container {
+    animation: slideUp 1.5s ease;
+  }
+
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+  <h1>🍁 HTML & CSS Review 🍂</h1>
+
+  <div class="container">
+    <div class="card">
+      <div class="inner">
+        <div class="front">What does HTML stand for?</div>
+      <div class="back">HyperText Markup Language</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+        <div class="front">What does CSS stand for?</div>
+      <div class="back">Cascading Style Sheets</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+      <div class="front">What tag defines a hyperlink?</div>
+      <div class="back">&lt;a&gt; (anchor) tag</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+        <div class="front">Which property changes text color?</div>
+      <div class="back">color</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+       <div class="front">What CSS property changes font?</div>
+      <div class="back">font-family</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+       <div class="front">What tag is used for images?</div>
+      <div class="back">&lt;img&gt;</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+       <div class="front">How do you center text?</div>
+      <div class="back">text-align: center;</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="inner">
+       <div class="front">Which CSS property adds space inside an element?</div>
+      <div class="back">padding</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
